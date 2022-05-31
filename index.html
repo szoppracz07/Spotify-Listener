@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Listener</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Lato&family=Montserrat:wght@100;200;400;500;600;700&family=Poppins&family=Roboto&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="jquery.js"></script>
+
+    <link rel="icon" href="img/loop.png">
+
+    <style>
+        img {
+            width: 150px;
+            -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+            filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+        }
+
+        @keyframes showTopText {
+            0% { transform: translate3d(0, 100%, 0); opacity: 0%;}
+            100% { transform: translate3d(0, 0, 0); opacity: 100%;}
+        }
+
+        @keyframes TopTextDown {
+            0% { transform: translate3d(0, 0, 0); opacity: 100%;}
+            100% { transform: translate3d(0, 100%, 0); opacity: 0%;}
+        }
+
+        #textinfo {
+            bottom: 0;
+        }
+
+        @media only screen and (min-width: 540px) 
+        { 
+            #textinfo {
+                max-width: 440px; 
+                width: 440px; 
+            }
+        }
+
+        @media only screen and (max-width: 540px) 
+        { 
+            #textinfo {
+                max-width: 300px; 
+                width: 300px; 
+            }
+        }
+
+        .opacityzero {
+            opacity: 0;
+        }
+
+        .showtext {
+            animation: showTopText 1s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .textdown {
+            animation: TopTextDown 1s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+    </style>
+</head>
+<body class="bg-no-repeat bg-cover bg-black" style="backdrop-filter: blur(15px); transition: background-image 2s;">
+    <div id="connectinfo" style="transition: opacity 1s; background-color: rgba(0, 0, 0, 0.05); backdrop-filter: blur(15px);" class="opacityzero absolute text-white text-xl p-2 rounded-xl m-3">
+        <p id="connected" class="text-center">Connected with Device</p>
+    </div>
+
+    <div class="w-screen h-screen flex justify-center items-end">
+        <div id="info" class="m-10 mb-20 p-5 text-white sm:text-2xl rounded-xl" style="font-family: 'Montserrat', sans-serif; text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); background-color: rgba(0, 0, 0, 0.178); box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);">
+            <div class="ml-7 opacityzero" id="textinfo">
+                <p class="font-light drop-shadow-lg" id="artist"></p>
+                <p class="font-medium"id="name"></p>
+            </div>
+            <div class="grid w-full grid-cols-5 ">
+                <img class="w-16 sm:w-20 hover:animate-pulse" id="random" src="img/random.png">
+                <img class="w-16 sm:w-20 hover:animate-pulse" id="prev" src="img/prev.png">
+                <img class="w-16 sm:w-20 hover:animate-pulse" id="togglePlay" src="img/Stop.png">
+                <img class="w-16 sm:w-20 hover:animate-pulse" id="next" src="img/next.png">
+                <img class="w-16 sm:w-20 hover:animate-pulse" id="loop" src="img/loop.png">
+            </div>
+            <div class="flex justify-center items-center text-xs">
+                <p id="timeNow">0:00</p>
+                <div class="h-1 rounded-xl w-full bg-[#ccc4] m-5">
+                    <div id="progressbar" class="relative h-full w-0 bg-white rounded-xl" style="transition: width 1s; box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);"></div>
+                </div>
+                <p id="time">0:00</p>
+            </div>
+
+            <script>
+
+            </script>
+            <!-- <div class="flex justify-center items-center mt-6">
+                <a href="" id="login"><button onclick="getToken();" class="text-xl w-52 h-14 rounded-lg bg-green-500">Login with spotify</button></a>
+            </div> -->
+        </div>
+        
+    </div>
+    
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
