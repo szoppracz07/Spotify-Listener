@@ -1,5 +1,5 @@
 <div align="center">
-# Spotify-Listener
+**Spotify-Listener**
 
 Shows what you are currently listening to on Spotify!
     >Demo: https://spotify.devpush.xyz
