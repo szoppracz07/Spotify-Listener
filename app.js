@@ -12,6 +12,11 @@
     var MusicImage = localStorage.getItem("musicimage");
     var Duration = localStorage.getItem("duration");
     var Progress = localStorage.getItem("progress");
+    var DeviceName = localStorage.getItem("devicename");
+    if(DeviceName == null || DeviceName == undefined || DeviceName == "")
+    {
+        DeviceName = "Spotify Listener";
+    }
 
     // Check is Music Playing
     var isPlaying;
@@ -33,9 +38,7 @@
         return paramsSplitUp;
     };
 
-    const CLIENT_ID = "4eae97685f324d1893b393830c3df2d6";
     const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
-    const REDIRECT_URL_AFTER_LOGIN = "https://spotify.devpush.xyz";
     const SPACE_DELIMITER = "%20";
     const SCOPES = [
         "user-read-currently-playing",
@@ -214,7 +217,7 @@
 
     window.onSpotifyWebPlaybackSDKReady = () => {
         const player = new Spotify.Player({
-            name: 'Spotify Listener',
+            name: DeviceName,
             getOAuthToken: cb => { cb(TOKEN); },
             volume: 0.1
         });
@@ -287,7 +290,7 @@
 
 
         document.getElementById('togglePlay').onclick = function() {
-        player.togglePlay();
+            player.togglePlay();
         };
 
         document.getElementById('prev').onclick = function() {
@@ -299,4 +302,34 @@
         };
 
         player.connect();
+
+        document.getElementById('notify-confirm').onclick = function() {
+            HideNotify();
+            var input = document.getElementById('notify-input').value;
+            if(input != '' || input != null || input != undefined) {
+                DeviceName = input;
+                player.setName(DeviceName).then(() => {
+                    document.getElementById("connected").textContent = "Device Name Changed!";
+                    showConnectInfo();
+                });	
+                localStorage.setItem("devicename", input);
+            }
+        }
     }
+
+// Notify Functions
+
+    function ShowNotify() {
+        document.getElementById('div-input').classList.remove('opacityzero');
+    }
+
+    function HideNotify() {
+        document.getElementById('div-input').classList.add('opacityzero');
+    }
+
+// Notify Events
+
+document.getElementById('settingDevice').onclick = function() {
+    ShowNotify();
+};
+
