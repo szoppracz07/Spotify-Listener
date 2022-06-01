@@ -50,7 +50,7 @@
         "user-read-private"
     ];
     const SCOPES_URL_PARAM = SCOPES.join(SPACE_DELIMITER);
-    const AUTH_URL = `${SPOTIFY_AUTHORIZE_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URL_AFTER_LOGIN}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`;
+    const AUTH_URL = `${SPOTIFY_AUTHORIZE_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`;
 
     if(window.location.hash) {
         const {
@@ -68,7 +68,7 @@
         localStorage.setItem("expire", futureDate);
 
         TOKEN = access_token;
-        window.location = REDIRECT_URL_AFTER_LOGIN;
+        window.location = REDIRECT_URI;
     }
 
     function CheckToken() {
