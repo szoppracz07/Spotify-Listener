@@ -1,7 +1,10 @@
+<div align="center">
 # Spotify-Listener
 
 Shows what you are currently listening to on Spotify!
-    Demo: https://spotify.devpush.xyz
+    >Demo: https://spotify.devpush.xyz
+
+</div>
 
 ## Info
 
