@@ -1,6 +1,6 @@
 <div align="center">
 <img src="https://github.com/szoppracz07/Spotify-Listener/blob/main/README%20FILES/logo.png" align="right" width="121" height="121" />
-<h1>Spotify-Listener</h1>
+<h1>Spotify-Listener 🔊</h1>
 
 Shows what you are currently listening to on Spotify!
 <blockquote>
@@ -8,7 +8,7 @@ Shows what you are currently listening to on Spotify!
 </blockquote>
 </div>
 
-## Info
+## Info 🔔
 
 Every 30 seconds, a request is sent to the Spotify Api and the website currently displays information about the song.
 You can also connect to your browser via spotify and listen to songs from your browser.
@@ -17,7 +17,7 @@ You can also connect to your browser via spotify and listen to songs from your b
     <img src="https://github.com/szoppracz07/Spotify-Listener/blob/main/README%20FILES/demo.gif" width="656" height="369" />
 </div>
 
-## Installation
+## Installation 📒
 - `git clone https://github.com/szoppracz07/Spotify-Listener.git`
 - Go to `https://developer.spotify.com/dashboard/login`and Create new app
 - Click `EDIT SETTINGS` Button and add your Redirect URL to `Redirect URIs`
@@ -26,3 +26,11 @@ You can also connect to your browser via spotify and listen to songs from your b
 <img src="https://github.com/szoppracz07/Spotify-Listener/blob/main/README%20FILES/important.png" width="469" height="237" />
 
 **Congratulations, everything has been set!** 
+
+## Todo 📃
+
+- [ ✔️ ] Change Device Name
+- [ ❌ ] Volume Controlling
+- [ ❌ ] Logging Out
+- [ ❌ ] Token Validation
+- [ ❌ ] Refresh Token
