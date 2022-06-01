@@ -8,4 +8,4 @@ Shows what you are currently listening to on Spotify!
 Every 30 seconds, a request is sent to the Spotify Api and the website currently displays information about the song.
 You can also connect to your browser via spotify and listen to songs from your browser.
 
-![Demo Gif](https://github.com/szoppracz07/Spotify-Listener/blob/main/README%20FILES/demo.gif)
+<img src="https://github.com/szoppracz07/Spotify-Listener/blob/main/README%20FILES/demo.gif" width="95%" height="95%" />
