@@ -24,4 +24,4 @@ You can also connect to your browser via spotify and listen to songs from your b
 - Change values in **important.js**
 <img src="https://github.com/szoppracz07/Spotify-Listener/blob/main/README%20FILES/important.png" width="469" height="237" />
 
-	**Congratulations, everything has been set!** 
+**Congratulations, everything has been set!** 
