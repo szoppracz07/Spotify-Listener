@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/szoppracz07/Spotify-Listener/blob/main/README%20FILES/logo.png" width="242" height="242" />
+<img src="https://github.com/szoppracz07/Spotify-Listener/blob/main/README%20FILES/logo.png" align="right" width="121" height="121" />
 <h1>Spotify-Listener</h1>
 
 Shows what you are currently listening to on Spotify!
