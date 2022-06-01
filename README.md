@@ -1,9 +1,10 @@
 <div align="center">
-**Spotify-Listener**
+<h1>Spotify-Listener</h1>
 
 Shows what you are currently listening to on Spotify!
-    >Demo: https://spotify.devpush.xyz
-
+<blockquote>
+    Demo: https://spotify.devpush.xyz
+</blockquote>
 </div>
 
 ## Info
