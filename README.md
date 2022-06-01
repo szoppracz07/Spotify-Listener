@@ -16,7 +16,7 @@ You can also connect to your browser via spotify and listen to songs from your b
     <img src="https://github.com/szoppracz07/Spotify-Listener/blob/main/README%20FILES/demo.gif" width="656" height="369" />
 </div>
 
-## Instalation
+## Installation
 - `git clone https://github.com/szoppracz07/Spotify-Listener.git`
 - Go to `https://developer.spotify.com/dashboard/login`and Create new app
 - Click `EDIT SETTINGS` Button and add your Redirect URL to `Redirect URIs`
