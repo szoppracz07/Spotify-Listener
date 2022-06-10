@@ -29,7 +29,6 @@
         const stringAfterHashtag = hash.substring(1);
         const paramsInUrl = stringAfterHashtag.split("&");
         const paramsSplitUp = paramsInUrl.reduce((accumulater, currentValue) => {
-        console.log(currentValue);
         const [key, value] = currentValue.split("=");
         accumulater[key] = value;
         return accumulater;
@@ -256,8 +255,6 @@
             }
 
             const data = current_track;
-
-            console.log(data);
 
             localStorage.setItem("duration", duration);
             localStorage.setItem("progress", position);
